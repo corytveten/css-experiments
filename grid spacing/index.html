@@ -1,14 +1,19 @@
 <style>
     .item1{background:LightSkyBlue;}
-    .item2{background:LightSalmon;}
-    .item3{background:PaleTurquoise;}
+    .item2{
+        background:LightSalmon;
+    }
+    .item3{
+        background:PaleTurquoise;
+    }
     .item4{background:LightPink;}
     
     .item5 {
       background: PaleGreen;
       /* add your code below this line */
-      grid-column: 2 / 4;
-      
+      /* grid-column: 2 / 4;
+      grid-row: 2 / 4; */
+      /* grid-area: footer; */
       /* add your code above this line */
     }
     
@@ -18,9 +23,17 @@
       width: 100%;
       background: LightGray;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      /* grid-template-columns: 1fr 1fr 1fr; */
       grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+
       grid-gap: 10px;
+        /* grid-template-areas: 
+        "header header header"
+        ". content content"
+        "footer footer footer"
+        ; */
+
     }
   </style>
     
